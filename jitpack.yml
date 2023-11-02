@@ -1,0 +1,5 @@
+install:
+  - FILE="-Dfile=pom.xml"
+  - mvn install:install-file $FILE -DgroupId=com.phyreapp -DartifactId=parent -Dversion=1.2.0 -Dpackaging=pom -DpomFile=pom.xml
+  - FILE="-Dfile=phyre-gpay/phyre-gpay-1.2.0.aar"
+  - mvn install:install-file $FILE -DgroupId=com.phyreapp -DartifactId=phyre-gpay -Dversion=1.2.0 -Dpackaging=aar -DpomFile=phyre-gpay/pom.xml
